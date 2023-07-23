@@ -39,7 +39,7 @@ export default async function Home() {
     <div className="pb-10">
       <HeroImage
         title="👩‍💻 Learning to code, because hot girls have quarter-life crisis"
-        subtitle="I'm Fanni, a wannabe (game) developer, content creator, former social media strategist and Brandon Sanderson stan."
+        subtitle="I'm Fanni, a wannabe (game) developer, content creator, former social media strategist and unofficial nerd historian."
       />
       <div className="container mt-12 max-w-6xl">
         <div className="grid grid-cols-1 place-items-start justify-between gap-12 lg:grid-cols-3">

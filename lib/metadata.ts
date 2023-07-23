@@ -20,7 +20,7 @@ export const defaultAuthor: AuthorType = {
   },
 };
 
-const defaultTitle = `${defaultAuthor.name}'s Blog`;
+const defaultTitle = `Dragons and Codes`;
 const defaultDescription = `I'm ${defaultAuthor.name}. Learning to code, because hot girls have quarter-life crisis.`;
 
 const siteMetadata: SiteMetaData = {
