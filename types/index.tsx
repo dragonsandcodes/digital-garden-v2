@@ -60,7 +60,7 @@ export type AuthorType = {
   email: string;
   website: string;
   jobTitle: string;
-  company: string;
+  company?: string;
   availableForWork: boolean;
   location: {
     city: string;

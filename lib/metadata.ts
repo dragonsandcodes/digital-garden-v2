@@ -6,22 +6,22 @@ export const BASE_URL =
   process.env.VERCEL_URL || process.env.NEXT_PUBLIC_BASE_URL || `http://localhost:${process.env.PORT || 3000}`;
 
 export const defaultAuthor: AuthorType = {
-  name: "Amy Shields",
-  handle: "@amyshieldsfake",
+  name: "Fanni Friedrich",
+  handle: "@dragonsandcodes",
   socialProfiles,
-  email: "definitelyfake@nevermind.com",
-  website: "https://nextjs.org",
-  jobTitle: "Frontend Engineer & UI Designer",
-  company: "Unicorns & Co.",
+  email: "fanni@dragonsandcodes.com",
+  website: "https://dragonsandcodes.com",
+  jobTitle: "Wannabe (game) developer, Content Creator",
+  //company: "Unicorns & Co.",
   availableForWork: true,
   location: {
-    city: "Los Angeles",
-    media: "/losangeles.jpg",
+    city: "Barcelona",
+    media: "/barcelona.jpg",
   },
 };
 
 const defaultTitle = `${defaultAuthor.name}'s Blog`;
-const defaultDescription = `I'm ${defaultAuthor.name}. Building hackin’ cool digital products around the world 🌴.`;
+const defaultDescription = `I'm ${defaultAuthor.name}. Learning to code, because hot girls have quarter-life crisis.`;
 
 const siteMetadata: SiteMetaData = {
   title: {
@@ -30,6 +30,7 @@ const siteMetadata: SiteMetaData = {
   },
   description: defaultDescription,
   siteRepo: "https://github.com/thedevdavid/digital-garden",
+  metadataBase: new URL(BASE_URL),
   newsletterUrl: "https://developreneur.davidlevai.com",
   analyticsProvider: "umami",
 };

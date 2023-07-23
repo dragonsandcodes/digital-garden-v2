@@ -3,13 +3,16 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 
-import { defaultAuthor } from "@/lib/metadata";
+import siteMetadata, { defaultAuthor } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 import { CommandDialogComponent } from "@/components/command-dialog";
+import { CopyButton } from "@/components/copy-button";
 import { MobileNav } from "@/components/mobile-nav";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Navbar } from "@/components/navbar";
+import { SocialButton } from "@/components/social-button";
 import { WorkAvailabilityBadge } from "@/components/work-availability-badge";
 
 export function Navigation() {
@@ -82,6 +85,21 @@ export function Navigation() {
           </div>
         </div>
       </header>
+      <div className="flex max-w-7xl flex-row justify-end space-x-2 text-sm text-muted-foreground">
+        {defaultAuthor.socialProfiles.map((platform) => (
+          <SocialButton
+            key={platform.name}
+            variant="ghost"
+            size="icon"
+            className="hover:text-foreground"
+            platform={platform}
+          />
+        ))}
+        <CopyButton size="icon" variant="ghost" className="hover:text-foreground" copyText={defaultAuthor.email}>
+          <Mail />
+          <span className="sr-only">Email address</span>
+        </CopyButton>
+      </div>
     </>
   );
 }
