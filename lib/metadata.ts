@@ -30,7 +30,6 @@ const siteMetadata: SiteMetaData = {
   },
   description: defaultDescription,
   siteRepo: "https://github.com/thedevdavid/digital-garden",
-  newsletterUrl: "https://developreneur.davidlevai.com",
   analyticsProvider: "umami",
 };
 

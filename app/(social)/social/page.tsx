@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail } from "lucide-react";
 
 import { defaultAuthor } from "@/lib/metadata";
 import { projects } from "@/lib/projects-data";
+import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/copy-button";
 import NewsletterSubscribe from "@/components/newsletter-subscribe";
 import { Signature } from "@/components/signature";
@@ -29,6 +31,11 @@ export default async function SocialPage() {
           </div>
           <h2 className="mb-2 mt-6 font-heading text-2xl font-bold">My socials</h2>
           <div className="mb-4 flex w-full max-w-2xl flex-col space-y-4">
+            <Button asChild variant="outline">
+              <Link href="https://skillshare.eqcm.net/eKqRDr" target="_blank">
+                💻 Try Skillshare for FREE for 30 Days
+              </Link>
+            </Button>
             {defaultAuthor.socialProfiles.map((platform) => (
               <SocialButton key={platform.name} variant="outline" platform={platform} />
             ))}
@@ -36,7 +43,6 @@ export default async function SocialPage() {
               <Mail className="mr-2" /> Email address
             </CopyButton>
           </div>
-          <Signature />
         </div>
       </div>
       <NewsletterSubscribe
