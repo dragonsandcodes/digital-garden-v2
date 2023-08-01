@@ -46,9 +46,8 @@ export default async function SocialPage() {
         </div>
       </div>
       <NewsletterSubscribe
-        title="I also write deep dives in email"
-        description="I write about coding, design, digital nomad life, and solopreneurship. Join over 1,000 other developers in
-            getting better in business. Unsubscribe whenever."
+        title="Do you want to recieve some pretty awesome emails?"
+        description="I mostly talk about learning game and web development, fantasy books and other fun things on the internet. I'll also send you a list of my favorite FREE games on Steam as a gift."
         buttonText="Send me the emails"
       />
     </>
