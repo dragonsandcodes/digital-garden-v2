@@ -62,8 +62,8 @@ export default async function Home() {
         </div>
       </div>
       <NewsletterSubscribe
-        title="Do you want to recieve some pretty awesome emails?"
-        description="I mostly talk about learning game and web development, fantasy books and other fun things on the internet. I'll also send you a list of my favorite FREE games on Steam as a gift."
+        title="🎮 Are you an unofficial gaming and nerd historian too?"
+        description=" Than let me send you some pretty awesome emails every Sunday, where we talk about gaming, game development and anything our heart desires. As I gift I'll also send you my list of favorite FREE Games on Steam. "
         buttonText="Send me the emails"
       />
       {aboutPage && (

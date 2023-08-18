@@ -52,7 +52,8 @@ const NewsletterSubscribe = ({ title, description, buttonText }: CTAProps) => {
 
     return toast({
       title: "Success.",
-      description: "You'll get the emails now.",
+      description:
+        "Success!🎉 From now on you'll receive my emails every Sunday. Your extra is also on its way to you! ",
     });
   };
 
