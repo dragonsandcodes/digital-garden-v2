@@ -62,9 +62,9 @@ export default async function Home() {
         </div>
       </div>
       <NewsletterSubscribe
-        title="🎮 Are you an unofficial gaming and nerd historian too?"
-        description=" Than let me send you some pretty awesome emails every Sunday, where we talk about gaming, game development and anything our heart desires. As I gift I'll also send you my list of favorite FREE Games on Steam. "
-        buttonText="Send me the emails"
+        title="🎮 Are you an unofficial nerd historian too?"
+        description=" Than let me send you some pretty awesome emails every Monday, where we talk about gaming, game development and anything our heart desiress."
+        buttonText="Sign me up Fanni!"
       />
       {aboutPage && (
         <div className="container max-w-6xl">
