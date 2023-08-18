@@ -38,7 +38,7 @@ export default async function Home() {
   return (
     <div className="pb-10">
       <HeroImage
-        title="👩‍💻 Learning to code, because hot girls have quarter-life crisis"
+        title="👩‍💻 Learning game development, because hot girls have quarter-life crisis"
         subtitle="I'm Fanni, a wannabe (game) developer, content creator, former social media strategist and unofficial nerd historian."
       />
       <div className="container mt-12 max-w-6xl">
