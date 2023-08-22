@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { allPosts } from "@/.contentlayer/generated";
+import { compareDesc } from "date-fns";
 import { Mail } from "lucide-react";
 
 import { defaultAuthor } from "@/lib/metadata";
@@ -7,11 +9,17 @@ import { projects } from "@/lib/projects-data";
 import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/copy-button";
 import NewsletterSubscribe from "@/components/newsletter-subscribe";
+import PostPreview from "@/components/post-preview";
 import { Signature } from "@/components/signature";
 import { SocialButton } from "@/components/social-button";
 import { SpotlightCard } from "@/components/spotlight-card";
 
 export default async function SocialPage() {
+  const post = allPosts
+    .filter((post) => post.status === "published")
+    .sort((a, b) =>
+      compareDesc(new Date(a.lastUpdatedDate || a.publishedDate), new Date(b.lastUpdatedDate || b.publishedDate))
+    )[0];
   return (
     <>
       <div className="container pt-10">
@@ -23,13 +31,20 @@ export default async function SocialPage() {
               <p>{defaultAuthor.handle}</p>
             </div>
           </div>
+          <h2 className="mb-2 mt-6 font-heading text-2xl font-bold">Latest blogpost</h2>
+          <div className="grid grid-flow-row gap-2">{post && <PostPreview post={post} key={post._id} />}</div>
+          <NewsletterSubscribe
+            title="Do you want to recieve some pretty awesome emails?"
+            description="I mostly talk about learning game and web development, fantasy books and other fun things on the internet. I'll also send you a list of my favorite FREE games on Steam as a gift."
+            buttonText="Send me the emails"
+          />
           <h2 className="mb-2 mt-6 font-heading text-2xl font-bold">My projects</h2>
           <div className="grid items-stretch gap-4 md:grid-cols-2">
             {projects.map((item) => (
               <SpotlightCard key={item.href} {...item} />
             ))}
           </div>
-          <h2 className="mb-2 mt-6 font-heading text-2xl font-bold">My socials</h2>
+          {/* <h2 className="mb-2 mt-6 font-heading text-2xl font-bold">My socials</h2>
           <div className="mb-4 flex w-full max-w-2xl flex-col space-y-4">
             <Button asChild variant="outline">
               <Link href="https://skillshare.eqcm.net/eKqRDr" target="_blank">
@@ -42,14 +57,9 @@ export default async function SocialPage() {
             <CopyButton variant="default" copyText={defaultAuthor.email}>
               <Mail className="mr-2" /> Email address
             </CopyButton>
-          </div>
+          </div> */}
         </div>
       </div>
-      <NewsletterSubscribe
-        title="Do you want to recieve some pretty awesome emails?"
-        description="I mostly talk about learning game and web development, fantasy books and other fun things on the internet. I'll also send you a list of my favorite FREE games on Steam as a gift."
-        buttonText="Send me the emails"
-      />
     </>
   );
 }
