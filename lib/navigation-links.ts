@@ -45,7 +45,7 @@ export const navigationLinks: NavItem[] = [
   },
   {
     title: "Media Kit",
-    href: "https://bit.ly/47bH1ta",
+    href: "https://bit.ly/48gtbWY",
   },
   {
     title: "About",
